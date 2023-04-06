@@ -1,4 +1,4 @@
-package scooter.ordersTests;
+package scooter.orders_tests;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;

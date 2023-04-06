@@ -4,6 +4,7 @@ import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
+import static org.apache.http.HttpStatus.SC_OK;
 import static scooter.BaseSpecification.*;
 
 public class CourierClient {
@@ -46,7 +47,7 @@ public class CourierClient {
     public static void courierDeleteAfterTest(int courierId) {
         Response response = setCourierDelete(courierId);
         response.then().assertThat()
-                .statusCode(200)
+                .statusCode(SC_OK)
                 .extract().path("ok");
     }
 
